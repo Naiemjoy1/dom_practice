@@ -84,3 +84,20 @@ document.addEventListener("click", function (event) {
 
   elem.hidden = !elem.hidden;
 });
+
+let event = new Event("click");
+elem.dispatchEvent(event);
+
+menu.onclick = function () {
+  alert(1);
+
+  menu.dispatchEvent(
+    new CustomEvent("menu-open", {
+      bubbles: true,
+    })
+  );
+
+  alert(2);
+};
+
+document.addEventListener("menu-open", () => alert("nested"));
