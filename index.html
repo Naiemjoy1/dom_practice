@@ -22,8 +22,34 @@
           <button class="increaseClick">click to increase</button>
           <button class="decreaseClick">click to decrease</button>
         </div>
-
         <p class="clickCount">0</p>
+      </div>
+      <div class="event">
+        <input type="button" onclick="countRabbits()" value="Count rabbits" />
+        <input type="button" id="count_rabbit" value="Button click by id" />
+      </div>
+      <div id="menu">
+        <button data-action="save">Save</button>
+        <button data-action="load">Load</button>
+        <button data-action="search">Search</button>
+      </div>
+      <div id="counter">
+        <p>
+          counter: <span><input type="button" value="1" data-counter /></span>
+        </p>
+        <p>
+          another counter:
+          <span><input type="button" value="2" data-counter /></span>
+        </p>
+      </div>
+      <div id="toggler">
+        <button data-toggle-id="subscribe-mail">
+          Show the subscription form
+        </button>
+
+        <form id="subscribe-mail" hidden>
+          Your mail: <input type="email" />
+        </form>
       </div>
     </main>
     <footer>

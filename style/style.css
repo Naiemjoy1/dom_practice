@@ -39,3 +39,29 @@ footer {
   justify-content: center;
   align-items: center;
 }
+
+.event {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+}
+
+#menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+#counter {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+#toggler {
+  gap: 20px;
+}

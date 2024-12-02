@@ -29,3 +29,58 @@ decreaseButton.addEventListener("click", () => {
   count--;
   clickCount.textContent = count;
 });
+
+function countRabbits() {
+  for (let i = 1; i <= 3; i++) {
+    alert("Rabbit number " + i);
+  }
+}
+
+const countRabbitsButton = document.getElementById("count_rabbit");
+
+countRabbitsButton.addEventListener("click", () => {
+  alert("button click by id");
+});
+
+class Menu {
+  constructor(elem) {
+    this._elem = elem;
+    elem.onclick = this.onClick.bind(this); // (*)
+  }
+
+  save() {
+    alert("saving");
+  }
+
+  load() {
+    alert("loading");
+  }
+
+  search() {
+    alert("searching");
+  }
+
+  onClick(event) {
+    let action = event.target.dataset.action;
+    if (action) {
+      this[action]();
+    }
+  }
+}
+
+new Menu(menu);
+
+document.addEventListener("click", function (event) {
+  if (event.target.dataset.counter != undefined) {
+    event.target.value++;
+  }
+});
+
+document.addEventListener("click", function (event) {
+  let id = event.target.dataset.toggleId;
+  if (!id) return;
+
+  let elem = document.getElementById(id);
+
+  elem.hidden = !elem.hidden;
+});
